@@ -1,0 +1,22 @@
+{
+  "name": "threejs-template",
+  "version": "1.0.0",
+  "description": "three.js w/ TypeScript Template",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "watch": "webpack --mode development --watch",
+    "dev": "live-server"
+  },
+  "devDependencies": {
+    "@types/three": "^0.103.2",
+    "live-server": "^1.2.1",
+    "ts-loader": "^8.0.11",
+    "typescript": "^4.1.2",
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "three": "^0.123.0"
+  }
+}
