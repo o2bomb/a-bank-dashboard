@@ -1,4 +1,5 @@
 const path = require("path");
+const isDevelopment = process.env.NODE_ENV === "development";
 
 module.exports = {
   entry: "./src/index.ts",
@@ -9,7 +10,15 @@ module.exports = {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/
-      }
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader",
+        ],
+      },
     ]
   },
   resolve: {

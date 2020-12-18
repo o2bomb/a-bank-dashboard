@@ -1,7 +1,7 @@
 {
-  "name": "threejs-template",
+  "name": "a-bank-dashboard",
   "version": "1.0.0",
-  "description": "three.js w/ TypeScript Template",
+  "description": "A-Bank Dashboard",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -10,7 +10,11 @@
   },
   "devDependencies": {
     "@types/three": "^0.103.2",
+    "css-loader": "^5.0.1",
     "live-server": "^1.2.1",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
     "ts-loader": "^8.0.11",
     "typescript": "^4.1.2",
     "webpack": "^5.10.0",

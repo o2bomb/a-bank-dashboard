@@ -1,0 +1,133 @@
+@import "./variables.scss";
+@import "./base.scss";
+
+body {
+  display: flex;
+  // height: 100vh;
+  padding: 4rem;
+  font-family: 'Roboto Slab', serif;
+
+  .account {
+    display: flex;
+    padding: 5rem 0;
+    border-radius: 3rem;
+    background-color: var(--color-accent);
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      margin: 0 3rem;
+
+      .logo {
+      }
+
+      ul {
+        margin: auto 0;
+        list-style-type: none;
+      }
+
+      .avatar {
+      }
+    }
+
+    .vertical-divider {
+      align-self: center;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      margin: 0 5rem;
+
+      .account-info {
+        margin-bottom: 6rem;
+
+        .credit-card {
+          width: 52.5rem;
+          height: 30rem;
+          border-radius: 3rem;
+          background-color: var(--color-accent-5);
+          margin-bottom: 4rem;
+        }
+  
+        .payment-progress {
+        }
+      }
+
+      .transaction-info {
+        .title-group {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .transactions {
+          .transaction-item {
+            display: grid;
+            grid-template-columns: 7rem 1fr;
+
+            .icon {
+
+            }
+
+            .details {
+              .payee {
+
+              }
+
+              .category {
+
+              }
+
+              .price {
+
+              }
+
+              .date {
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+  
+  .dashboard {
+    flex-grow: 3;
+  }
+}
+
+.logo {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  .a {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+
+  .bank {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: .5em;
+  }
+}
+
+.title {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-size: 3rem;
+
+  b {
+    font-weight: 600;
+  }
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 100%;
+  background-color: var(--color-neutral);
+  opacity: 20%;
+}
