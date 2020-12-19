@@ -1,0 +1,30 @@
+/*
+Perform basic CSS reset so that every browser displays CSS
+in exactly the same way
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* box-sizing by default is not inherited, so force it to be inherited */
+  /* i.e. all child elements with the box-sizing property will now inherit from this */
+  box-sizing: inherit;
+}
+
+html {
+  /* This assigned root font size will allow the usage of the rem unit */
+  /* The rem unit is used to define children element padding/font sizes */
+  /* Default font size is 16px so set it to 10px (62.5% of 16px) for easy calculations */
+  /* (1 rem == 10px) */
+  font-size: 62.5%;
+
+  //   @include respond(tab-land) {
+  //     font-size: 56.25%;   // 1 rem == 9px, 9/16 = 56.25%
+  //   }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--color-background);
+}

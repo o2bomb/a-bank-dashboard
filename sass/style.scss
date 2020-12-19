@@ -1,0 +1,197 @@
+@import "./variables.scss";
+@import "./base.scss";
+
+body {
+  margin: 6rem 8rem;
+  background-color: var(--color-background-2);
+
+  .main {
+    display: flex;
+    // height: 100vh;
+    padding: 4rem;
+    border-radius: 4rem;
+    background-color: var(--color-background);
+    
+    font-family: 'Roboto Slab', serif;
+
+    .account {
+      display: flex;
+      padding: 5rem 0;
+      border-radius: 3rem;
+      background-color: var(--color-accent);
+  
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        margin: 0 3rem;
+  
+        .logo {
+        }
+  
+        ul {
+          margin: auto 0;
+          list-style-type: none;
+        }
+  
+        .avatar {
+        }
+      }
+  
+      .vertical-divider {
+        align-self: center;
+      }
+  
+      .main-content {
+        flex-grow: 1;
+        margin: 0 5rem;
+  
+        .account-info {
+          margin-bottom: 6rem;
+  
+          .credit-card {
+            width: 30rem;
+            height: 17.5rem;
+            border-radius: 3rem;
+            background-color: var(--color-accent-5);
+            margin: 0 auto;
+            margin-bottom: 4rem;
+          }
+    
+          .payment-progress {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+  
+            progress {
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+  
+              margin-bottom: 2rem;
+              border: none;
+              width: 100%;
+              height: 1rem;
+  
+              &::-webkit-progress-value {
+                background-color: var(--color-background);
+              }
+  
+              &::-webkit-progress-bar, &::-moz-progress-bar {
+                background-color: var(--color-text);
+                border-radius: 1rem;
+              }
+            }
+  
+            .label {
+              display: inline-block;
+            }
+  
+            .progress {
+              float: right;
+              color: var(--color-neutral);
+  
+              .amount {
+                font-weight: 600;
+                color: var(--color-text);
+              }
+            }
+          }
+        }
+  
+        .transaction-info {
+          .title-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+          }
+  
+          .transactions {
+            .transaction-item {
+              display: grid;
+              grid-template-columns: 7rem 1fr;
+  
+              font-family: 'Montserrat', sans-serif;
+              font-weight: 400;
+              font-size: 1.5rem;
+  
+              .icon {
+  
+              }
+  
+              .details {
+                .payee {
+                  display: inline-block;
+  
+                  font-weight: 600;
+                }
+  
+                .category {
+                  display: inline-block;
+                  color: var(--color-neutral);
+  
+                  font-family: 'Roboto Slab', serif;
+                  font-weight: 300;
+                }
+                
+                .price {
+                  float: right;
+  
+                  font-weight: 600;
+                }
+  
+                .date {
+                  float: right;
+                  color: var(--color-neutral);
+  
+                  font-family: 'Roboto Slab', serif;
+                  font-weight: 300;
+                }
+              }
+            }
+          }
+        }
+      }
+  
+    }
+    
+    .dashboard {
+      flex-grow: 3;
+    }
+  }
+}
+
+
+.logo {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  .a {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+
+  .bank {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: .5em;
+  }
+}
+
+.title {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-size: 3rem;
+
+  b {
+    font-weight: 600;
+  }
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 100%;
+  background-color: var(--color-neutral);
+  opacity: 20%;
+}
