@@ -167,6 +167,10 @@ body {
               .amount {
                 font-weight: 600;
                 color: var(--color-text);
+
+                &::before {
+                  content: "$"
+                }
               }
             }
           }
