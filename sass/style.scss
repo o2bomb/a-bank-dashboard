@@ -182,8 +182,12 @@ body {
             .all {
               border-radius: 2rem;
               height: 3rem;
-              width: 5rem;
+              width: 6rem;
               background-color: var(--color-background);
+
+              .chev {
+                margin-left: .5rem;
+              }
             }
           }
 
