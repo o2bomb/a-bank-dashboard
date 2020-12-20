@@ -233,6 +233,10 @@ body {
             align-items: center;
             margin-bottom: 3rem;
 
+            .title {
+              font-size: 2.5rem;
+            }
+
             .all {
               border-radius: 2rem;
               height: 3rem;
@@ -341,12 +345,32 @@ body {
 
     .dashboard {
       flex-grow: 3;
+      padding: 5rem 7rem;
+      
+      .title-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+          
+        }
+        
+        .button-group {
+          .btn {
+            height: initial;
+            width: initial;
+            padding: 1rem;
+            font-size: 3rem;
+          }
+        }
+      }
     }
   }
 }
 
 .btn {
-  border: 0;
+  border: 1px solid transparent;
   background-color: transparent;
   white-space: nowrap;
   text-decoration: none;
@@ -393,7 +417,7 @@ body {
 .title {
   font-family: "Roboto Slab", serif;
   font-weight: 300;
-  font-size: 3rem;
+  font-size: 4rem;
 
   b {
     font-weight: 600;
