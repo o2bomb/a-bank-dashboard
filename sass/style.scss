@@ -228,9 +228,6 @@ body {
 
         .transaction-info {
           .title-group {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             margin-bottom: 3rem;
 
             .title {
@@ -240,7 +237,7 @@ body {
             .all {
               border-radius: 2rem;
               height: 3rem;
-              width: 6rem;
+              min-width: 6rem;
               background-color: var(--color-background);
 
               .chev {
@@ -348,10 +345,6 @@ body {
       padding: 5rem 7rem;
       
       .title-group {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
         .title {
           
         }
@@ -365,8 +358,76 @@ body {
           }
         }
       }
+
+      .main-content {
+        margin-top: 6rem;
+        
+        .habits {
+          display: flex;
+          height: 30rem;
+
+          .savings-info {
+            flex-grow: 1;
+
+            .title-group {
+              .subtitle {
+
+              }
+              
+              .options {
+                height: 4rem;
+                width: 4rem;
+              }    
+            }
+          }
+
+          .vertical-divider {
+            margin: 0 4rem;
+          }
+
+          .spendings-info {
+            flex-grow: 1;
+
+            .title-group {
+              .subtitle {
+                
+              }
+
+              .week {
+                border-radius: 2rem;
+                height: 3rem;
+                min-width: 7rem;
+                background-color: var(--color-accent);
+                
+                .chev {
+                  margin-left: .5rem;
+                }
+              }
+            }
+          }
+        }
+
+        .shortcuts {
+          margin-top: 3rem;
+          height: 30rem;
+          border-radius: 3rem;
+          border: 1px solid var(--color-neutral-3);
+        }
+      }
     }
   }
+}
+
+.subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.title-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn {
@@ -427,6 +488,5 @@ body {
 .vertical-divider {
   width: 1px;
   height: 100%;
-  background-color: var(--color-neutral);
-  opacity: 20%;
+  background-color: var(--color-neutral-3);
 }
