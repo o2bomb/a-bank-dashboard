@@ -31,9 +31,59 @@ body {
         ul {
           margin: auto 0;
           list-style-type: none;
+
+          .nav-item {            
+            &:not(:last-child) {
+              margin-bottom: 1rem;
+            }
+
+            &.active {
+              a {
+                background-color: var(--color-text);
+                color: var(--color-background);
+              }
+            }
+            
+            a {
+              display: grid;
+              height: 5.5rem;
+              width: 5.5rem;    
+              border-radius: 50%;
+              color: var(--color-neutral-2);
+              
+              font-size: 2rem;
+
+              & > * {
+                margin: auto;
+              }
+
+              &:hover {
+                color: var(--color-background);
+                background-color: var(--color-text);
+              }
+
+              &:focus {
+                border: 1px solid var(--color-text);
+              }
+            }
+          }
         }
 
         .avatar {
+          position: relative;
+          height: 5.5rem;
+          width: 5.5rem;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 110%;
+            width: 110%;
+            transform: translate(-50%, -50%);
+          }
         }
       }
 
