@@ -1,5 +1,9 @@
-import "../sass/style.scss";
 // import * as THREE from "three";
+import '@fortawesome/fontawesome-free/js/fontawesome'
+import '@fortawesome/fontawesome-free/js/solid'
+import '@fortawesome/fontawesome-free/js/regular'
+import '@fortawesome/fontawesome-free/js/brands'
+import "../sass/style.scss";
 
 // window.addEventListener("load", init, false);
 // window.addEventListener("resize", handleWindowResize, false);

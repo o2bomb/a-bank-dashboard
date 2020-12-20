@@ -21,6 +21,7 @@
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "three": "^0.123.0"
   }
 }

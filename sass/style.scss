@@ -11,85 +11,159 @@ body {
     padding: 4rem;
     border-radius: 4rem;
     background-color: var(--color-background);
-    
-    font-family: 'Roboto Slab', serif;
+
+    font-family: "Roboto Slab", serif;
 
     .account {
       display: flex;
       padding: 5rem 0;
       border-radius: 3rem;
       background-color: var(--color-accent);
-  
+
       .sidebar {
         display: flex;
         flex-direction: column;
         margin: 0 3rem;
-  
+
         .logo {
         }
-  
+
         ul {
           margin: auto 0;
           list-style-type: none;
         }
-  
+
         .avatar {
         }
       }
-  
+
       .vertical-divider {
         align-self: center;
       }
-  
+
       .main-content {
         flex-grow: 1;
         margin: 0 5rem;
-  
+
         .account-info {
           margin-bottom: 6rem;
-  
+
           .credit-card {
+            position: relative;
             width: 30rem;
             height: 17.5rem;
             border-radius: 3rem;
-            background-color: var(--color-accent-5);
+            background: linear-gradient(to right, white 25%, var(--color-accent-5) 25%);
             margin: 0 auto;
             margin-bottom: 4rem;
+
+            font-family: "Montserrat", sans-serif;
+
+            .logo {
+              position: absolute;
+              top: 2rem;
+              left: 2rem;
+            }
+
+            .amount {
+              position: absolute;
+              bottom: 4.5rem;
+              left: 2rem;
+
+              font-size: 3rem;
+              font-weight: 700;
+
+              &::before {
+                content: "$ "
+              }
+            }
+
+            .card-number {
+              position: absolute;
+              bottom: 2rem;
+              left: 2rem;
+
+              font-weight: 600;
+              font-size: 1.3rem;
+
+              &::before {
+                content: "•••• •••• •••• " // must save/serve css file as utf-8 content
+              }
+            }
+
+            .dressing {
+              position: absolute;
+              top: 2rem;
+              right: 2rem;
+              display: inline-block;
+              width: 3.5rem;
+              height: 3.5rem;
+              border-radius: 50%;
+              background-color: black;
+
+              .lines {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+
+                &::before {
+                  display: block;
+                  margin-bottom: .5rem;
+                  border-radius: .2rem;
+                  width: 1.2rem;
+                  height: .2rem;
+                  background-color: white;
+                  content: "";
+                }
+  
+                &::after {
+                  display: block;                
+                  width: .7rem;
+                  height: .2rem;
+                  border-radius: .2rem;
+                  background-color: white;
+                  content: "";
+                }
+              }
+            }
           }
-    
+
           .payment-progress {
-            font-family: 'Montserrat', sans-serif;
+            font-family: "Montserrat", sans-serif;
             font-weight: 400;
             font-size: 1.5rem;
-  
+
             progress {
               -webkit-appearance: none;
               -moz-appearance: none;
               appearance: none;
-  
+
               margin-bottom: 2rem;
               border: none;
               width: 100%;
               height: 1rem;
-  
+
               &::-webkit-progress-value {
                 background-color: var(--color-background);
               }
-  
-              &::-webkit-progress-bar, &::-moz-progress-bar {
+
+              &::-webkit-progress-bar,
+              &::-moz-progress-bar {
                 background-color: var(--color-text);
                 border-radius: 1rem;
               }
             }
-  
+
             .label {
               display: inline-block;
             }
-  
+
             .progress {
               float: right;
               color: var(--color-neutral);
-  
+
               .amount {
                 font-weight: 600;
                 color: var(--color-text);
@@ -97,69 +171,148 @@ body {
             }
           }
         }
-  
+
         .transaction-info {
           .title-group {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             margin-bottom: 3rem;
+
+            .all {
+              border-radius: 2rem;
+              height: 3rem;
+              width: 5rem;
+              background-color: var(--color-background);
+            }
           }
-  
+
           .transactions {
             .transaction-item {
               display: grid;
               grid-template-columns: 7rem 1fr;
-  
-              font-family: 'Montserrat', sans-serif;
+              padding: 1rem 0;
+
+              font-family: "Montserrat", sans-serif;
               font-weight: 400;
               font-size: 1.5rem;
-  
-              .icon {
-  
-              }
-  
-              .details {
-                .payee {
-                  display: inline-block;
-  
-                  font-weight: 600;
+
+              &.music {
+                .icon {
+                  background-color: var(--color-accent-2);
                 }
+              }
+
+              &.games {
+                .icon {
+                  background-color: var(--color-accent-3);
+                }
+              }
+
+              &.food {
+                .icon {
+                  font-size: 2rem;
+                  background-color: var(--color-accent-4);
+                }
+              }
+              
+              .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 5rem;
+                width: 5rem;
+                border-radius: 50%;
+                color: var(--color-background);
+                font-size: 2.5rem;
+              }
+
+              .details {
+                display: flex;
+                flex-direction: column;
+
+                .group-1 {
+                  .payee {
+                    display: inline-block;
   
-                .category {
-                  display: inline-block;
-                  color: var(--color-neutral);
+                    font-weight: 600;
+                  }
   
-                  font-family: 'Roboto Slab', serif;
-                  font-weight: 300;
+                  .price {
+                    float: right;
+  
+                    font-weight: 600;
+                  }
                 }
                 
-                .price {
-                  float: right;
+                .group-2 {
+                  margin-top: auto;
+
+                  .category {
+                    display: inline-block;
+                    color: var(--color-neutral);
   
-                  font-weight: 600;
-                }
+                    font-family: "Roboto Slab", serif;
+                    font-weight: 300;
+                  }  
   
-                .date {
-                  float: right;
-                  color: var(--color-neutral);
+                  .date {
+                    float: right;
+                    color: var(--color-neutral);
   
-                  font-family: 'Roboto Slab', serif;
-                  font-weight: 300;
+                    font-family: "Roboto Slab", serif;
+                    font-weight: 300;
+                  }
                 }
               }
             }
           }
+
+          .view-more {
+            margin-top: 1rem;
+            color: var(--color-neutral);
+
+            &:hover,
+            &:focus {
+              text-decoration: underline;
+            }
+          }
         }
       }
-  
     }
-    
+
     .dashboard {
       flex-grow: 3;
     }
   }
 }
 
+.btn {
+  border: 0;
+  background-color: transparent;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  height: 3rem;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--color-text);
+  }
+}
+
+.negative {
+  color: var(--color-negative); 
+  font-weight: 600;
+}
+
+.positive {
+  color: var(--color-positive); 
+  font-weight: 600;
+}
 
 .logo {
   font-size: 3rem;
@@ -167,20 +320,20 @@ body {
   text-transform: uppercase;
 
   .a {
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
     font-weight: 600;
     font-size: 1.5em;
   }
 
   .bank {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    font-size: .5em;
+    font-size: 0.5em;
   }
 }
 
 .title {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 300;
   font-size: 3rem;
 
