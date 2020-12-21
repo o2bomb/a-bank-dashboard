@@ -32,7 +32,7 @@ body {
           margin: auto 0;
           list-style-type: none;
 
-          .nav-item {            
+          .nav-item {
             &:not(:last-child) {
               margin-bottom: 1rem;
             }
@@ -43,14 +43,14 @@ body {
                 color: var(--color-background);
               }
             }
-            
+
             a {
               display: grid;
               height: 5.5rem;
-              width: 5.5rem;    
+              width: 5.5rem;
               border-radius: 50%;
               color: var(--color-neutral-2);
-              
+
               font-size: 2rem;
 
               & > * {
@@ -103,7 +103,11 @@ body {
             width: 30rem;
             height: 17.5rem;
             border-radius: 3rem;
-            background: linear-gradient(to right, white 25%, var(--color-accent-5) 25%);
+            background: linear-gradient(
+              to right,
+              white 25%,
+              var(--color-accent-5) 25%
+            );
             margin: 0 auto;
             margin-bottom: 4rem;
 
@@ -124,7 +128,7 @@ body {
               font-weight: 700;
 
               &::before {
-                content: "$ "
+                content: "$ ";
               }
             }
 
@@ -137,7 +141,7 @@ body {
               font-size: 1.3rem;
 
               &::before {
-                content: "•••• •••• •••• " // must save/serve css file as utf-8 content
+                content: "•••• •••• •••• "; // must save/serve css file as utf-8 content
               }
             }
 
@@ -157,22 +161,21 @@ body {
                 left: 50%;
                 transform: translate(-50%, -50%);
 
-
                 &::before {
                   display: block;
-                  margin-bottom: .5rem;
-                  border-radius: .2rem;
+                  margin-bottom: 0.5rem;
+                  border-radius: 0.2rem;
                   width: 1.2rem;
-                  height: .2rem;
+                  height: 0.2rem;
                   background-color: white;
                   content: "";
                 }
-  
+
                 &::after {
-                  display: block;                
-                  width: .7rem;
-                  height: .2rem;
-                  border-radius: .2rem;
+                  display: block;
+                  width: 0.7rem;
+                  height: 0.2rem;
+                  border-radius: 0.2rem;
                   background-color: white;
                   content: "";
                 }
@@ -219,7 +222,7 @@ body {
                 color: var(--color-text);
 
                 &::before {
-                  content: "$"
+                  content: "$";
                 }
               }
             }
@@ -241,7 +244,7 @@ body {
               background-color: var(--color-background);
 
               .chev {
-                margin-left: .5rem;
+                margin-left: 0.5rem;
               }
             }
           }
@@ -274,7 +277,7 @@ body {
                   background-color: var(--color-accent-4);
                 }
               }
-              
+
               .icon {
                 display: flex;
                 justify-content: center;
@@ -293,32 +296,32 @@ body {
                 .group-1 {
                   .payee {
                     display: inline-block;
-  
+
                     font-weight: 600;
                   }
-  
+
                   .price {
                     float: right;
-  
+
                     font-weight: 600;
                   }
                 }
-                
+
                 .group-2 {
                   margin-top: auto;
 
                   .category {
                     display: inline-block;
                     color: var(--color-neutral);
-  
+
                     font-family: "Roboto Slab", serif;
                     font-weight: 300;
-                  }  
-  
+                  }
+
                   .date {
                     float: right;
                     color: var(--color-neutral);
-  
+
                     font-family: "Roboto Slab", serif;
                     font-weight: 300;
                   }
@@ -343,12 +346,11 @@ body {
     .dashboard {
       flex-grow: 3;
       padding: 5rem 7rem;
-      
+
       .title-group {
         .title {
-          
         }
-        
+
         .button-group {
           .btn {
             height: initial;
@@ -361,7 +363,7 @@ body {
 
       .main-content {
         margin-top: 6rem;
-        
+
         .habits {
           display: flex;
           height: 30rem;
@@ -369,39 +371,102 @@ body {
           .savings-info {
             flex-grow: 1;
 
+            & > * {
+              &:not(:last-child) {
+                margin-bottom: 3.5rem;
+              }
+            }
+
             .title-group {
               .subtitle {
-
               }
-              
+
               .options {
                 height: 4rem;
                 width: 4rem;
-              }    
+              }
             }
-          }
 
-          .vertical-divider {
-            margin: 0 4rem;
-          }
+            .stat-item {
+              display: flex;
 
-          .spendings-info {
-            flex-grow: 1;
+              .pie-chart {
+                height: 6rem;
+                width: 6rem;
+                margin-right: 2.5rem;
+                border-radius: 50%;
 
-            .title-group {
-              .subtitle {
-                
+                &.deposits {
+                  background: conic-gradient(
+                    var(--color-text) 270deg,
+                    var(--color-accent) 90deg
+                  );                    
+                }
+
+                &.investments {
+                  background: conic-gradient(
+                    var(--color-text) 225deg,
+                    var(--color-accent) 135deg
+                  );  
+                }
               }
 
-              .week {
-                border-radius: 2rem;
-                height: 3rem;
-                min-width: 7rem;
-                background-color: var(--color-accent);
-                
-                .chev {
-                  margin-left: .5rem;
+              .details {
+                font-family: "Montserrat", sans-serif;
+
+                .group-1 {
+                  font-weight: 700;
+                  font-size: 3rem;
+
+                  &::before {
+                    content: "$ ";
+                  }
+
+                  .trend {
+                    vertical-align: 1.2em;
+
+                    font-weight: 400;
+                    font-size: 1.5rem;
+                  }
                 }
+
+                .group-2 {
+                  color: var(--color-neutral);
+
+                  font-weight: 400;
+                  font-size: 1.5rem;
+                }
+              }
+
+              .more-info {
+                margin-left: auto;
+                color: var(--color-text);
+
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+
+        .vertical-divider {
+          margin: 0 4rem;
+        }
+
+        .spendings-info {
+          flex-grow: 1;
+
+          .title-group {
+            .subtitle {
+            }
+
+            .week {
+              border-radius: 2rem;
+              height: 3rem;
+              min-width: 7rem;
+              background-color: var(--color-accent);
+
+              .chev {
+                margin-left: 0.5rem;
               }
             }
           }
@@ -448,12 +513,12 @@ body {
 }
 
 .negative {
-  color: var(--color-negative); 
+  color: var(--color-negative);
   font-weight: 600;
 }
 
 .positive {
-  color: var(--color-positive); 
+  color: var(--color-positive);
   font-weight: 600;
 }
 
