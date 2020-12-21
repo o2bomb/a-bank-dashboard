@@ -369,7 +369,7 @@ body {
           height: 30rem;
 
           .savings-info {
-            flex-grow: 1;
+            flex: 1;
 
             & > * {
               &:not(:last-child) {
@@ -453,7 +453,7 @@ body {
         }
 
         .spendings-info {
-          flex-grow: 1;
+          flex: 1;
 
           .title-group {
             .subtitle {
