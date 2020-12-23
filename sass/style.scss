@@ -371,13 +371,9 @@ body {
           .savings-info {
             flex: 1;
 
-            & > * {
-              &:not(:last-child) {
-                margin-bottom: 3.5rem;
-              }
-            }
-
             .title-group {
+              margin-bottom: 3.5rem;
+
               .subtitle {
               }
 
@@ -390,6 +386,10 @@ body {
             .stat-item {
               display: flex;
 
+              &:not(:last-child) {
+                margin-bottom: 7rem;
+              }
+
               .pie-chart {
                 height: 6rem;
                 width: 6rem;
@@ -400,14 +400,14 @@ body {
                   background: conic-gradient(
                     var(--color-text) 270deg,
                     var(--color-accent) 90deg
-                  );                    
+                  );
                 }
 
                 &.investments {
                   background: conic-gradient(
                     var(--color-text) 225deg,
                     var(--color-accent) 135deg
-                  );  
+                  );
                 }
               }
 
@@ -456,6 +456,8 @@ body {
           flex: 1;
 
           .title-group {
+            margin-bottom: 6rem;
+
             .subtitle {
             }
 
@@ -467,6 +469,45 @@ body {
 
               .chev {
                 margin-left: 0.5rem;
+              }
+            }
+          }
+
+          .bar-graph {
+            display: flex;
+            height: 16rem;
+            width: 100%;
+            justify-content: space-around;
+            align-items: flex-end;
+
+            .bar {
+              position: relative;
+              height: var(--bar-value);
+              width: 1.5rem;
+              border-radius: 1rem;
+              background: linear-gradient(
+                var(--color-accent-6),
+                var(--color-accent-7)
+              );
+
+              &::before {
+                position: absolute;
+                top: -2rem;
+                transform: translate(-20%, 0);
+                content: "-$" attr(data-value);
+
+                font-family: "Montserrat", sans-serif;
+                font-weight: 600;
+                font-size: 1.2rem;
+              }
+
+              &::after {
+                position: absolute;
+                bottom: -2rem;
+                transform: translate(-10%, 0);
+                content: attr(data-label);
+
+                font-size: 1.2rem;
               }
             }
           }
