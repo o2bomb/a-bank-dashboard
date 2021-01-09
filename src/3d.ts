@@ -2,8 +2,12 @@ import * as THREE from "three";
 
 window.addEventListener("load", init, false);
 // window.addEventListener("resize", handleWindowResize, false);
-// document.addEventListener("mousemove", handleMouseMove, false);
+document.addEventListener("mousemove", handleMouseMove, false);
 
+let mousePos = {
+  x: 0,
+  y: 0
+}
 let WIDTH = 240;
 let HEIGHT = 240;
 let scene: THREE.Scene,
@@ -57,11 +61,23 @@ function handleWindowResize() {
   camera.updateProjectionMatrix();
 }
 
+function handleMouseMove(e: MouseEvent) {
+  // here we are converting the mouse position value received
+  // to a normalized value varying between -1 and 1;
+  // this is the formula for the horizontal axis:
+  let tx = -1 + (e.clientX / window.innerWidth) * 2;
+
+  // for the vertical axis, we need to inverse the formula
+  // because the 2D y-axis goes the opposite direction of the 3D y-axis
+  let ty = 1 - (e.clientY / window.innerHeight) * 2;
+  mousePos = { x: tx, y: ty };
+}
+
 function animate() {
   requestAnimationFrame(animate);
 
-  // cube.rotation.x += 0.01;
-  // cube.rotation.y += 0.01;
+  cube.rotation.x = Math.sin(mousePos.x);
+  cube.rotation.y = Math.sin(mousePos.y);
 
   renderer.render(scene, camera);
 }
