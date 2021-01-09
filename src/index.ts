@@ -34,7 +34,7 @@ function init() {
   // cube.rotateZ(Math.PI / 3);
   scene.add(cube);
 
-  const sphereGeometry = new THREE.SphereGeometry(0.4);
+  const sphereGeometry = new THREE.SphereGeometry(0.4, 16, 16);
   const sphereMaterial = new THREE.MeshLambertMaterial({
     color: 0x5c566b,
   });
