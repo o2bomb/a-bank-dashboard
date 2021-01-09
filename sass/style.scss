@@ -514,6 +514,7 @@ body {
         }
 
         .shortcuts {
+          position: relative;
           display: flex;
           justify-content: space-between;
           height: 30rem;
@@ -521,6 +522,12 @@ body {
           padding: 3rem;
           border-radius: 3rem;
           border: 1px solid var(--color-neutral-3);
+
+          #c {
+            position: absolute;
+            top: -8rem;
+            left: 5rem;
+          }
 
           .info {
             width: 40rem;
