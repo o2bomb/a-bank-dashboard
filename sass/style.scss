@@ -95,6 +95,12 @@ body {
         flex-grow: 1;
         margin: 0 5rem;
 
+        @media (max-width: 1460px) {
+          & {
+            margin: 0 3rem;
+          }
+        }
+
         .account-info {
           margin-bottom: 6rem;
 
@@ -344,7 +350,9 @@ body {
     }
 
     .dashboard {
-      flex-grow: 3;
+      flex: 3;
+      min-width: 0;
+      width: 100%;
       padding: 5rem 7rem;
 
       .title-group {
@@ -364,15 +372,74 @@ body {
       .main-content {
         margin-top: 6rem;
 
+        @media (max-width: 1400px) {
+          & {
+            margin-top: 8rem;
+          }
+        }
+
         .habits {
           display: flex;
           height: 30rem;
 
-          .savings-info {
-            flex: 1;
+          @media (max-width: 1400px) {
+            & {
+              height: 20rem;
+              margin-bottom: 10rem;
 
+              .accordian-item {
+                flex: 0;
+                display: flex;
+                min-width: 4rem;
+                transition: flex .3s ease-out;
+                
+                &.visible {
+                  flex: 1;
+
+                  .accordian-content {
+                    flex: 1;
+                    overflow: visible;
+                  }
+                }
+
+                .accordian-toggle {
+                  border: 1px solid transparent;
+
+                  &:hover {
+                    border: 1px solid black;
+                  }
+                }
+
+                .accordian-content {
+                  flex: 0;
+                  overflow: hidden;
+                  align-self: center;
+                  transition: flex .3s ease-out;
+                }
+              }
+            }
+          }
+
+          .savings-info {
             .title-group {
               margin-bottom: 3.5rem;
+
+              @media (max-width: 1400px) {
+                & {
+                  display: block;
+                  margin-bottom: 0;
+                  width: 4rem;
+
+                  .subtitle {
+                    transform-origin: left bottom;
+                    transform: rotate(90deg);
+                  }
+
+                  .options {
+                    display: none;
+                  }
+                }
+              }
 
               .subtitle {
               }
@@ -383,66 +450,68 @@ body {
               }
             }
 
-            .stat-item {
-              display: flex;
+            .stats {
+              .stat-item {
+                display: flex;
 
-              &:not(:last-child) {
-                margin-bottom: 7rem;
-              }
-
-              .pie-chart {
-                height: 6rem;
-                width: 6rem;
-                margin-right: 2.5rem;
-                border-radius: 50%;
-
-                &.deposits {
-                  background: conic-gradient(
-                    var(--color-text) 270deg,
-                    var(--color-accent) 90deg
-                  );
+                &:not(:last-child) {
+                  margin-bottom: 7rem;
                 }
 
-                &.investments {
-                  background: conic-gradient(
-                    var(--color-text) 225deg,
-                    var(--color-accent) 135deg
-                  );
-                }
-              }
+                .pie-chart {
+                  height: 6rem;
+                  width: 6rem;
+                  margin-right: 2.5rem;
+                  border-radius: 50%;
 
-              .details {
-                font-family: "Montserrat", sans-serif;
-
-                .group-1 {
-                  font-weight: 700;
-                  font-size: 3rem;
-
-                  &::before {
-                    content: "$ ";
+                  &.deposits {
+                    background: conic-gradient(
+                      var(--color-text) 270deg,
+                      var(--color-accent) 90deg
+                    );
                   }
 
-                  .trend {
-                    vertical-align: 1.2em;
+                  &.investments {
+                    background: conic-gradient(
+                      var(--color-text) 225deg,
+                      var(--color-accent) 135deg
+                    );
+                  }
+                }
+
+                .details {
+                  font-family: "Montserrat", sans-serif;
+
+                  .group-1 {
+                    font-weight: 700;
+                    font-size: 3rem;
+
+                    &::before {
+                      content: "$ ";
+                    }
+
+                    .trend {
+                      vertical-align: 1.2em;
+
+                      font-weight: 400;
+                      font-size: 1.5rem;
+                    }
+                  }
+
+                  .group-2 {
+                    color: var(--color-neutral);
 
                     font-weight: 400;
                     font-size: 1.5rem;
                   }
                 }
 
-                .group-2 {
-                  color: var(--color-neutral);
+                .more-info {
+                  margin-left: auto;
+                  color: var(--color-text);
 
-                  font-weight: 400;
-                  font-size: 1.5rem;
+                  font-size: 2rem;
                 }
-              }
-
-              .more-info {
-                margin-left: auto;
-                color: var(--color-text);
-
-                font-size: 2rem;
               }
             }
           }
@@ -450,13 +519,47 @@ body {
 
         .vertical-divider {
           margin: 0 4rem;
+
+          @media (max-width: 1430px) {
+            & {
+              margin: 0 2rem;
+            }
+          }
+
+          @media (max-width: 1400px) {
+            & {
+              display: none;
+            }
+          }
         }
 
         .spendings-info {
           flex: 1;
+          @media (max-width: 1400px) {
+            & {
+              display: flex;
+            }
+          }
 
           .title-group {
             margin-bottom: 6rem;
+
+            @media (max-width: 1400px) {
+              & {
+                display: block;
+                margin-bottom: 0;
+                width: 4rem;
+
+                .subtitle {
+                  transform-origin: left bottom;
+                  transform: rotate(90deg);
+                }
+
+                .week {
+                  display: none;
+                }
+              }
+            }
 
             .subtitle {
             }
@@ -479,6 +582,12 @@ body {
             width: 100%;
             justify-content: space-around;
             align-items: flex-end;
+
+            @media (max-width: 1400px) {
+              & {
+                transform: translate(0, -2rem);
+              }
+            }
 
             .bar {
               position: relative;
@@ -527,6 +636,13 @@ body {
             position: absolute;
             top: -8rem;
             left: 5rem;
+
+            @media (max-width: 1630px) {
+              & {
+                top: -8rem;
+                left: 3rem;
+              }
+            }
           }
 
           .info {

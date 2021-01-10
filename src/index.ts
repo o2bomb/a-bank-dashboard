@@ -6,3 +6,4 @@ import "../sass/style.scss";
 
 import "./3d";
 import "./animation";
+import "./accordian";

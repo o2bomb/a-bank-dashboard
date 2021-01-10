@@ -34,7 +34,7 @@
             </li>
           </ul>
           <div class="avatar">
-            <img src="https://i.pravatar.cc/300" />
+            <!-- <img src="https://i.pravatar.cc/300" /> -->
           </div>
         </nav>
         <span class="vertical-divider"></span>
@@ -153,58 +153,60 @@
         </div>
         <div class="main-content">
           <div class="habits">
-            <div class="savings-info">
-              <div class="title-group">
+            <div class="savings-info accordian-item">
+              <div class="title-group accordian-toggle">
                 <div class="subtitle">Savings</div>
                 <button class="btn options">
                   <i class="fas fa-ellipsis-h"></i>
                 </button>
               </div>
-              <div class="stat-item">
-                <div class="pie-chart deposits"></div>
-                <div class="details">
-                  <div class="group-1">
-                    <span id="deposits-value">
-                      12100
-                    </span>
-                    <span class="trend"
-                      ><span class="positive">+</span> 3%</span
-                    >
+              <div class="stats accordian-content">
+                <div class="stat-item">
+                  <div class="pie-chart deposits"></div>
+                  <div class="details">
+                    <div class="group-1">
+                      <span id="deposits-value">
+                        12100
+                      </span>
+                      <span class="trend"
+                        ><span class="positive">+</span> 3%</span
+                      >
+                    </div>
+                    <div class="group-2">74% of your deposits goal</div>
                   </div>
-                  <div class="group-2">74% of your deposits goal</div>
+                  <a href="#" class="btn more-info">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
                 </div>
-                <a href="#" class="btn more-info">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-              </div>
-              <div class="stat-item">
-                <div class="pie-chart investments"></div>
-                <div class="details">
-                  <div class="group-1">
-                    <span id="investments-value">
-                      31150
-                    </span>
-                    <span class="trend"
-                      ><span class="positive">+</span> 15%</span
-                    >
+                <div class="stat-item">
+                  <div class="pie-chart investments"></div>
+                  <div class="details">
+                    <div class="group-1">
+                      <span id="investments-value">
+                        31150
+                      </span>
+                      <span class="trend"
+                        ><span class="positive">+</span> 15%</span
+                      >
+                    </div>
+                    <div class="group-2">63% of your investments goal</div>
                   </div>
-                  <div class="group-2">63% of your investments goal</div>
+                  <a href="#" class="btn more-info">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
                 </div>
-                <a href="#" class="btn more-info">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
               </div>
             </div>
             <span class="vertical-divider"></span>
-            <div class="spendings-info">
-              <div class="title-group">
+            <div class="spendings-info accordian-item visible">
+              <div class="title-group accordian-toggle">
                 <div class="subtitle">Spendings</div>
                 <button class="btn week">
                   Week
                   <i class="chev fas fa-chevron-down"></i>
                 </button>
               </div>
-              <div class="bar-graph">
+              <div class="bar-graph accordian-content">
                 <div
                   class="bar"
                   style="--bar-value: 48%"
