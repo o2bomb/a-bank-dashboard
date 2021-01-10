@@ -1,7 +1,7 @@
 # A-Bank Dashboard
 Recreating [this Dribbble by Halo Web](https://dribbble.com/shots/14771001-A-bank-Dashboard?utm_source=Clipboard_Shot&utm_campaign=intriligator&utm_content=A-bank%20Dashboard&utm_medium=Social_Share)
 
-[Live demo](https://o2bomb.github.io/a-bank-dashboard/)
+[Live demo](https://o2bomb.github.io/a-bank-dashboard/) (best viewed on desktop devices)
 
 ## Running the project
 1. `yarn install` to download required packages
