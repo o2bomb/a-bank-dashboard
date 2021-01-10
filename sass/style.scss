@@ -404,9 +404,10 @@ body {
 
                 .accordian-toggle {
                   border: 1px solid transparent;
-
+                  
                   &:hover {
                     border: 1px solid black;
+                    cursor: pointer;
                   }
                 }
 
@@ -432,7 +433,7 @@ body {
 
                   .subtitle {
                     transform-origin: left bottom;
-                    transform: rotate(90deg);
+                    transform: translateY(-2rem) rotate(90deg);
                   }
 
                   .options {
@@ -553,6 +554,7 @@ body {
                 .subtitle {
                   transform-origin: left bottom;
                   transform: rotate(90deg);
+                  transform: translateY(-2rem) rotate(90deg);
                 }
 
                 .week {
